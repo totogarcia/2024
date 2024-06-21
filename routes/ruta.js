@@ -1,0 +1,86 @@
+'use strict'
+
+var express = require('express');
+var Controlador = require('../controllers/controlador');
+
+var api = express.Router();
+
+api.get('/prueba/:nombre?', Controlador.prueba);
+api.get('/accion/:id?', Controlador.getAccion);
+api.get('/acciones', Controlador.getAcciones);
+api.post('/accion', Controlador.saveAcciones);
+
+api.get('/alemania', Controlador.getAlemania);
+api.post('/alemania', Controlador.saveAlemania);
+api.delete('/alemania', Controlador.deleteAlemania);
+api.get('/australia', Controlador.getAustralia);
+api.post('/australia', Controlador.saveAustralia);
+api.delete('/australia', Controlador.deleteAustralia);
+api.get('/austria', Controlador.getAustria);
+api.post('/austria', Controlador.saveAustria);
+api.delete('/austria', Controlador.deleteAustria);
+api.get('/belgica', Controlador.getBelgica);
+api.post('/belgica', Controlador.saveBelgica);
+api.delete('/belgica', Controlador.deleteBelgica);
+api.get('/brasil', Controlador.getBrasil);
+api.post('/brasil', Controlador.saveBrasil);
+api.delete('/brasil', Controlador.deleteBrasil);
+api.get('/china', Controlador.getChina);
+api.post('/china', Controlador.saveChina);
+api.delete('/china', Controlador.deleteChina);
+api.get('/canada', Controlador.getCanada);
+api.post('/canada', Controlador.saveCanada);
+api.delete('/canada', Controlador.deleteCanada);
+api.get('/espana', Controlador.getEspana);
+api.post('/espana', Controlador.saveEspana);
+api.delete('/espana', Controlador.deleteEspana);
+api.get('/dinamarca', Controlador.getDinamarca);
+api.post('/dinamarca', Controlador.saveDinamarca);
+api.delete('/dinamarca', Controlador.deleteDinamarca);
+api.get('/eeuu', Controlador.getEEUU);
+api.post('/eeuu', Controlador.saveEEUU);
+api.delete('/eeuu', Controlador.deleteEEUU);
+api.get('/francia', Controlador.getFrancia);
+api.post('/francia', Controlador.saveFrancia);
+api.delete('/francia', Controlador.deleteFrancia);
+api.get('/holanda', Controlador.getHolanda);
+api.post('/holanda', Controlador.saveHolanda);
+api.delete('/holanda', Controlador.deleteHolanda);
+api.get('/topmundo', Controlador.getTopmundo);
+api.post('/topmundo', Controlador.saveTopmundo);
+api.delete('/topmundo', Controlador.deleteTopmundo);
+api.get('/italia', Controlador.getItalia);
+api.post('/italia', Controlador.saveItalia);
+api.delete('/italia', Controlador.deleteItalia);
+api.get('/india', Controlador.getIndia);
+api.post('/india', Controlador.saveIndia);
+api.delete('/india', Controlador.deleteIndia);
+api.get('/mexico', Controlador.getMexico);
+api.post('/mexico', Controlador.saveMexico);
+api.delete('/mexico', Controlador.deleteMexico);
+api.get('/noruega', Controlador.getNoruega);
+api.post('/noruega', Controlador.saveNoruega);
+api.delete('/noruega', Controlador.deleteNoruega);
+api.get('/portugal', Controlador.getPortugal);
+api.post('/portugal', Controlador.savePortugal);
+api.delete('/portugal', Controlador.deletePortugal);
+api.get('/rusia', Controlador.getRusia);
+api.post('/rusia', Controlador.saveRusia);
+api.delete('/rusia', Controlador.deleteRusia);
+api.get('/suecia', Controlador.getSuecia);
+api.post('/suecia', Controlador.saveSuecia);
+api.delete('/suecia', Controlador.deleteSuecia);
+api.get('/suiza', Controlador.getSuiza);
+api.post('/suiza', Controlador.saveSuiza);
+api.delete('/suiza', Controlador.deleteSuiza);
+api.get('/crypto', Controlador.getCrypto);
+api.post('/crypto', Controlador.saveCrypto);
+api.delete('/crypto', Controlador.deleteCrypto);
+api.get('/uk', Controlador.getUK);
+api.post('/uk', Controlador.saveUK);
+api.delete('/uk', Controlador.deleteUK);
+
+api.put('/accion/:id', Controlador.updateAcciones);
+api.delete('/accion/:id', Controlador.deleteAcciones);
+
+module.exports = api;

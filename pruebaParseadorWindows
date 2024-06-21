@@ -1,0 +1,22 @@
+const puppeteer = require('puppeteer');
+
+async function runTask() {
+  const browser = await puppeteer.launch({
+    headless: false, // Se ejecuta en modo no headless para visualización, cambia a true para producción
+    args: [
+      '--disable-web-security', // Deshabilita la seguridad web para permitir CORS
+      '--disable-features=IsolateOrigins,site-per-process', // Desactiva la política de mismo origen
+      '--flag-switches-begin --disable-site-isolation-trials --flag-switches-end'
+    ]
+  });
+  const page = await browser.newPage();
+  await page.goto('http://207.154.253.101:3678/#/apiRobot');
+  // Agrega aquí más acciones según sea necesario
+
+  // Simula interacciones o espera a que el proceso se complete
+  // Opcional: await page.waitFor(21600000); // Espera 6 horas si es necesario
+  await browser.close();
+  
+}
+
+runTask();
